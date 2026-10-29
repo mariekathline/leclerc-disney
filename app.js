@@ -787,6 +787,9 @@ function toast(text) {
   toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
 }
 
+// Numéro de version (défini dans version.js)
+$('#app-version').textContent = self.APP_VERSION || '?';
+
 // ---------- Installation (PWA) ----------
 
 let installEvent = null; // Chrome / Android / bureau : prompt natif ; iOS n'en a pas (Partager → Sur l'écran d'accueil)

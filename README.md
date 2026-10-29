@@ -33,7 +33,7 @@ Les fixeez (autocollants non numérotés) : `"fixeezTotal": 24`, puis des items 
 
 1. Créer `collections/2027.json` (même format, nouvel `id`).
 2. L'ajouter dans `collections/index.json` et mettre `default` sur la nouvelle édition.
-3. Incrémenter `VERSION` dans `sw.js` pour que les installations existantes se mettent à jour.
+3. Incrémenter la version dans `version.js` (affichée dans Sauvegarde et utilisée pour le cache) pour que les installations existantes se mettent à jour.
 
 Les anciennes éditions restent consultables via le sélecteur en haut ; les progressions sont conservées par édition.
 

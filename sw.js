@@ -1,8 +1,8 @@
-// Incrémenter VERSION à chaque déploiement pour forcer la mise à jour du cache.
-const VERSION = 'v33';
-const CACHE = 'vignettes-' + VERSION;
+// La version (et donc le cache) vient de version.js : à incrémenter à chaque déploiement.
+importScripts('version.js');
+const CACHE = 'vignettes-' + self.APP_VERSION;
 const SHELL = [
-  './', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
+  './', 'index.html', 'style.css', 'version.js', 'app.js', 'manifest.webmanifest',
   'lib/qrcode.js', 'lib/jsQR.js',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
   'collections/index.json',
