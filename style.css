@@ -11,6 +11,8 @@
   --dup-line: #c98a00;
   --danger: #b3261e;
   --bar-track: #e1e3de;
+  --info-bg: #e3f0fd; --info-line: #2b7bd0; --info-ink: #0d3a6b;
+  --warn-bg: #fff3d0; --warn-line: #e0a100; --warn-ink: #5a3d00;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -26,6 +28,8 @@
     --dup-line: #e0a82e;
     --danger: #ff8a80;
     --bar-track: #2a2f36;
+    --info-bg: #12304f; --info-line: #5aa5ee; --info-ink: #d6e9fc;
+    --warn-bg: #3d3008; --warn-line: #f0b429; --warn-ink: #ffe9ad;
   }
 }
 
@@ -237,8 +241,10 @@ dialog .btn { margin-left: auto; margin-right: auto; }
 input, select, textarea { font-size: 16px; }
 
 /* Installation de l'appli */
-.banner { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
-.banner p { margin: 0 0 4px; font-size: .9rem; }
+.banner { background: var(--info-bg); color: var(--info-ink); border: 2px solid var(--info-line); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+.banner p { margin: 0 0 4px; font-size: .92rem; }
+.banner .btn.ghost { background: transparent; color: var(--info-ink); border-color: var(--info-line); }
+.banner .btn:not(.ghost) { background: var(--info-line); color: #fff; }
 .banner-actions { display: flex; gap: 8px; }
 .banner-actions .btn { margin-top: 8px; padding: 9px 12px; }
 .steps ol { margin: 4px 0 8px; padding-left: 22px; }
@@ -259,3 +265,14 @@ dialog#scanner::backdrop { background: rgba(0, 0, 0, .65); }
 button.chip.sel { font: inherit; font-size: .88rem; color: var(--ink); cursor: pointer; opacity: .5; }
 button.chip.sel.on { opacity: 1; background: var(--dup-line); border-color: var(--dup-line); color: #12333b; }
 button.chip.sel small { color: inherit; }
+
+/* Encadré d'action à faire par l'autre personne (échange, étape finale) */
+.callout { background: var(--warn-bg); color: var(--warn-ink); border: 2px solid var(--warn-line); border-radius: 10px; padding: 12px 14px; margin: 8px 0 12px; }
+.callout-title { margin: 0 0 6px; font-weight: 700; font-size: 1rem; }
+.callout ol { margin: 0; padding-left: 22px; }
+.callout li { margin: 4px 0; font-size: .92rem; }
+.status { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+.pill { border-radius: 99px; padding: 3px 10px; font-size: .8rem; font-weight: 600; border: 1px solid var(--line); }
+.pill.ok { background: #dff3e4; color: #15541f; border-color: #3aa65b; }
+.pill.wait { background: var(--warn-bg); color: var(--warn-ink); border-color: var(--warn-line); }
+@media (prefers-color-scheme: dark) { .pill.ok { background: #17301f; color: #b6f0c4; } }

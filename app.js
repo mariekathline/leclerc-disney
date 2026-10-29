@@ -547,7 +547,15 @@ function renderDone(box) {
   const qr = h('div', { class: 'qr' });
   qrInto(qr, tradeURL(t));
   $('#friend-body').replaceChildren(
-    h('p', { class: 'hint' }, `Ta collection est à jour. Pour que ${t.who} la mette à jour aussi, il scanne ce QR (avec l'appli ou son appareil photo) ou ouvre ce lien.`),
+    h('p', { class: 'status' },
+      h('span', { class: 'pill ok' }, 'Chez toi : fait'),
+      h('span', { class: 'pill wait' }, `Chez ${t.who} : en attente`)),
+    h('div', { class: 'callout' },
+      h('p', { class: 'callout-title' }, `Ce n'est pas fini : ${t.who} doit valider de son côté`),
+      h('ol', {},
+        h('li', {}, `${t.who} scanne ce QR avec son appareil photo ou l'appli (ou ouvre le lien).`),
+        h('li', {}, 'Il appuie sur « Valider de mon côté ».'),
+        h('li', {}, 'Sa collection se met à jour : l\'échange est terminé pour vous deux.'))),
     qr,
     h('button', { class: 'btn ghost', type: 'button', onclick: () => copyText(tradeURL(t), 'Lien de confirmation copié') }, 'Copier le lien de confirmation'),
     h('button', { class: 'btn danger', type: 'button', onclick: () => { undoLastTrade(); closeTrade(); } }, 'Annuler cet échange'),

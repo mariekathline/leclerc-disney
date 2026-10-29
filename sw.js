@@ -1,5 +1,5 @@
 // Incrémenter VERSION à chaque déploiement pour forcer la mise à jour du cache.
-const VERSION = 'v32';
+const VERSION = 'v33';
 const CACHE = 'vignettes-' + VERSION;
 const SHELL = [
   './', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
