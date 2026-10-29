@@ -1,0 +1,10 @@
+{
+  "default": "2026",
+  "editions": [
+    {
+      "id": "2026",
+      "title": "En route pour l'aventure (Noël 2026)",
+      "file": "2026.json"
+    }
+  ]
+}

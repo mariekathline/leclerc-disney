@@ -1,0 +1,1645 @@
+{
+  "id": "2026",
+  "title": "En route pour l'aventure",
+  "subtitle": "Collection Noël 2026 · Disney x Leclerc",
+  "total": 108,
+  "fixeezTotal": 24,
+  "imagesDir": "img/cartes/",
+  "items": [
+    {
+      "n": 1,
+      "name": "Woody",
+      "page": "Traversée de l'Amérique du Nord...",
+      "color": "#2f6fe0",
+      "symbol": {
+        "icon": "photo",
+        "color": "#d64545"
+      },
+      "description": "Il n'y a jamais eu d'ami plus loyal que le shérif Woody : intelligent, raisonnable et un leader né."
+    },
+    {
+      "n": 2,
+      "name": "Buzz Leclair",
+      "page": "Traversée de l'Amérique du Nord...",
+      "color": "#2f6fe0",
+      "symbol": {
+        "icon": "tongs",
+        "color": "#9a5bc4"
+      },
+      "description": "Buzz l'Éclair vit pour l'aventure et est toujours là pour soutenir son meilleur ami, Woody."
+    },
+    {
+      "n": 3,
+      "name": "Fourchette",
+      "page": "Traversée de l'Amérique du Nord...",
+      "color": "#2f6fe0",
+      "symbol": {
+        "icon": "carte",
+        "color": "#e8912d"
+      },
+      "description": "Créé par Bonnie le jour de sa rentrée en maternelle, Fourchette mettra du temps à comprendre qu'il est plus qu'une simple fourchette jetable ayant rempli sa mission."
+    },
+    {
+      "n": 4,
+      "name": "Jessie",
+      "page": "Traversée de l'Amérique du Nord...",
+      "color": "#2f6fe0",
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#4fa84f"
+      },
+      "description": "Jessie, la poupée cow-girl, est amicale, pleine d'énergie et une pro pour résoudre les problèmes."
+    },
+    {
+      "n": 5,
+      "name": "Rex",
+      "page": "Traversée de l'Amérique du Nord...",
+      "color": "#2f6fe0",
+      "symbol": {
+        "icon": "valise",
+        "color": "#3d8fd1"
+      },
+      "description": "Il peut avoir l'air féroce, mais Rex est gentil, doux et même très anxieux : en fait, c'est peut-être le dinosaure le plus froussard de tous les temps !"
+    },
+    {
+      "n": 6,
+      "name": "Lilypad",
+      "page": "Traversée de l'Amérique du Nord...",
+      "color": "#2f6fe0",
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#3d8fd1"
+      },
+      "description": "Lilypad, la tablette-grenouille, est le nouveau jouet préféré de Bonnie. Même si Lilypad est très high tech et Jessie plus traditionnelle, elles feront toujours tout pour aider Bonnie.",
+      "type": "main"
+    },
+    {
+      "n": 7,
+      "name": "Snappy",
+      "page": "Traversée de l'Amérique du Nord...",
+      "color": "#2f6fe0",
+      "symbol": {
+        "icon": "photo",
+        "color": "#d64545"
+      },
+      "description": "Souriez ! Snappy, le petit appareil photo-jouet le plus adorable qui soit, sort enfin du tiroir où il était oublié depuis des années !"
+    },
+    {
+      "n": 8,
+      "name": "Rouleau Pote",
+      "page": "Traversée de l'Amérique du Nord...",
+      "color": "#2f6fe0",
+      "symbol": {
+        "icon": "tongs",
+        "color": "#9a5bc4"
+      },
+      "description": "Rouleau Pote est un jouet high-tech pour apprendre la propreté. Oublié pendant des années, il reprend vie lorsqu'il est réveillé à l'improviste et recruté pour une mission importante."
+    },
+    {
+      "n": 9,
+      "name": "Atlas",
+      "page": "Traversée de l'Amérique du Nord...",
+      "color": "#2f6fe0",
+      "symbol": {
+        "icon": "carte",
+        "color": "#e8912d"
+      },
+      "description": "Atlas est un hippopotame-jouet qui parle. Après avoir passé des années oublié dans le tiroir à gadgets de Blaze, il est enfin prêt à guider tout le monde vers de nouvelles aventures !"
+    },
+    {
+      "n": 10,
+      "name": "Flash McQueen",
+      "page": "...D'un horizon à l'autre",
+      "color": [
+        "#d93a3a",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#4fa84f"
+      },
+      "description": "Flash McQueen est un pilote exceptionnel sur toutes les routes : qu'elles soient en asphalte ou en terre, Flash McQueen y incarne la vitesse."
+    },
+    {
+      "n": 11,
+      "name": "Cruz Ramirez",
+      "page": "...D'un horizon à l'autre",
+      "color": [
+        "#d93a3a",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#3d8fd1"
+      },
+      "description": "Cruz est une entraîneuse de premier ordre au centre Rust-eze, mais aussi une pilote talentueuse. Elle est optimiste, solaire, fougueuse et amicale.",
+      "type": "oeil"
+    },
+    {
+      "n": 12,
+      "name": "Martin",
+      "page": "...D'un horizon à l'autre",
+      "color": [
+        "#d93a3a",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#d64545"
+      },
+      "description": "Martin est l'ami parfait. Il a un cœur en or et est toujours prêt à donner un coup de main. Quand il s'agit de s'amuser, il est toujours partant, avec une passion pour les farces."
+    },
+    {
+      "n": 13,
+      "name": "Sally Carrera",
+      "page": "...D'un horizon à l'autre",
+      "color": [
+        "#d93a3a",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#9a5bc4"
+      },
+      "description": "Ancienne avocate à Los Angeles, Sally s'est réinventée à Radiator Springs en devenant la charmante défenseure du patrimoine et de la beauté historique de la ville."
+    },
+    {
+      "n": 14,
+      "name": "M. Indestructible",
+      "page": "...D'un horizon à l'autre",
+      "color": [
+        "#d93a3a",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#e8912d"
+      },
+      "description": "M. Indestructible vit désormais à plein temps sous l'identité de Robert Parr, un expert en assurances discret et sans histoire. Une vie qu'il trouve loin d'être épanouissante."
+    },
+    {
+      "n": 15,
+      "name": "Elastigirl",
+      "page": "...D'un horizon à l'autre",
+      "color": [
+        "#d93a3a",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#4fa84f"
+      },
+      "description": "Élever trois enfants et gérer un foyer occupe déjà énormément. Mais lorsque sa famille est menacée, Elastigirl n'hésite pas une seconde à voler à leur secours."
+    },
+    {
+      "n": 16,
+      "name": "Flèche Parr",
+      "page": "...D'un horizon à l'autre",
+      "color": [
+        "#d93a3a",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#3d8fd1"
+      },
+      "description": "Toujours en mouvement, Flèche peut courir à plus de 160 km/h. Les seules choses qu'il n'arrive pas à dépasser sont ses devoirs de maths et les corvées à la maison !"
+    },
+    {
+      "n": 17,
+      "name": "Violette Parr",
+      "page": "...D'un horizon à l'autre",
+      "color": [
+        "#d93a3a",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#d64545"
+      },
+      "description": "Violette est capable de devenir invisible et de créer des champs de force. Aînée de la famille Parr, elle se plaint régulièrement de ne pas avoir une vie normale."
+    },
+    {
+      "n": 18,
+      "name": "Jack-Jack Parr",
+      "page": "...D'un horizon à l'autre",
+      "color": [
+        "#d93a3a",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#9a5bc4"
+      },
+      "description": "En quelques secondes à peine, le temps de dire « gouzi-gouzi », Jack-Jack est capable de traverser une vitre et de se transformer en boule de feu sans la moindre égratignure."
+    },
+    {
+      "n": 19,
+      "name": "Miguel",
+      "page": "Cultures d'Amérique centrale et du Sud",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#e8912d"
+      },
+      "description": "Miguel Rivera rêve de devenir un musicien accompli, à l'image de son idole Ernesto de la Cruz, mais son arrière-arrière-grand-mère a interdit la musique il y a de nombreuses années.",
+      "type": "brillant"
+    },
+    {
+      "n": 20,
+      "name": "Dante",
+      "page": "Cultures d'Amérique centrale et du Sud",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#4fa84f"
+      },
+      "description": "Dante est l'ami fidèle de Miguel. Ce chien des rues xolo sans poils raffole du pan dulce, les délicieuses pâtisseries mexicaines."
+    },
+    {
+      "n": 21,
+      "name": "Héctor",
+      "page": "Cultures d'Amérique centrale et du Sud",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#3d8fd1"
+      },
+      "description": "Héctor accompagne Miguel dans sa quête pour retrouver le célèbre chanteur Ernesto de la Cruz et s'échapper du monde des ancêtres, sans savoir qu'un lien mystérieux les unit."
+    },
+    {
+      "n": 22,
+      "name": "Ernesto de la Cruz",
+      "page": "Cultures d'Amérique centrale et du Sud",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#d64545"
+      },
+      "description": "Ancien meilleur ami et partenaire musical d'Héctor, Ernesto de la Cruz s'est approprié sa musique pour devenir célèbre."
+    },
+    {
+      "n": 23,
+      "name": "Coco Rivera",
+      "page": "Cultures d'Amérique centrale et du Sud",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#9a5bc4"
+      },
+      "description": "Coco Rivera est l'arrière-grand-mère de Miguel. Elle oublie souvent beaucoup de choses, mais ses yeux s'illuminent dès que quelqu'un lui raconte une histoire de famille."
+    },
+    {
+      "n": 24,
+      "name": "Mirabel",
+      "page": "Cultures d'Amérique centrale et du Sud",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#e8912d"
+      },
+      "description": "Sensible, vive et intelligente, Mirabel n'a pas reçu de don lorsqu'elle a eu cinq ans et redouble donc d'efforts pour prouver qu'elle mérite sa place au sein de la famille Madrigal."
+    },
+    {
+      "n": 25,
+      "name": "Abuela Alma",
+      "page": "Cultures d'Amérique centrale et du Sud",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#4fa84f"
+      },
+      "description": "Forte, déterminée et perfectionniste, Abuela Alma est la matriarche de la famille."
+    },
+    {
+      "n": 26,
+      "name": "Isabela",
+      "page": "Cultures d'Amérique centrale et du Sud",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#3d8fd1"
+      },
+      "description": "Isabela, la sœur aînée de Mirabel, est l'enfant parfait, le véritable modèle de la famille. Gracieuse et magnifique, elle possède le pouvoir de faire éclore des fleurs."
+    },
+    {
+      "n": 27,
+      "name": "Antonio et Parce",
+      "page": "Cultures d'Amérique centrale et du Sud",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#d64545"
+      },
+      "description": "Doux et timide, Antonio est le cousin préféré et le meilleur ami de Mirabel. Il a le don de communiquer avec les animaux et partage d'ailleurs sa chambre avec un jaguar nommé Parce."
+    },
+    {
+      "n": 28,
+      "name": "Vaiana",
+      "page": "Cap sur les îles du Pacifique",
+      "color": "#5bb7e8",
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#9a5bc4"
+      },
+      "description": "Attirée par l'océan, Vaiana entreprend un voyage audacieux pour sauver son île et renouer avec son héritage de navigatrice."
+    },
+    {
+      "n": 29,
+      "name": "Maui",
+      "page": "Cap sur les îles du Pacifique",
+      "color": "#5bb7e8",
+      "symbol": {
+        "icon": "valise",
+        "color": "#e8912d"
+      },
+      "description": "Bébé, Maui a été recueilli et élevé par les dieux, mais il n'a jamais cessé d'essayer de prouver sa valeur aux humains."
+    },
+    {
+      "n": 30,
+      "name": "Simea",
+      "page": "Cap sur les îles du Pacifique",
+      "color": "#5bb7e8",
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#4fa84f"
+      },
+      "description": "Courageuse et débordante d'énergie, Simea a le cœur serré quand sa grande sœur Vaiana s'en va pour une nouvelle aventure. Mais elle sait qu'elles seront bientôt réunies."
+    },
+    {
+      "n": 31,
+      "name": "Pua",
+      "page": "Cap sur les îles du Pacifique",
+      "color": "#5bb7e8",
+      "symbol": {
+        "icon": "photo",
+        "color": "#3d8fd1"
+      },
+      "description": "Bien qu'il ne parle pas, Pua fait toujours de son mieux pour soutenir Vaiana. Il l'accompagne même lors de sa toute première aventure en pleine mer."
+    },
+    {
+      "n": 32,
+      "name": "Heihei",
+      "page": "Cap sur les îles du Pacifique",
+      "color": "#5bb7e8",
+      "symbol": {
+        "icon": "tongs",
+        "color": "#d64545"
+      },
+      "description": "Heihei, le coq maladroit, ne parle pas et fait sans cesse des choses totalement ridicules, comme marcher droit hors du bateau pour finir dans l'eau !"
+    },
+    {
+      "n": 33,
+      "name": "Kotu",
+      "page": "Cap sur les îles du Pacifique",
+      "color": "#5bb7e8",
+      "symbol": {
+        "icon": "carte",
+        "color": "#9a5bc4"
+      },
+      "description": "Fils du chef des Kakamora et ancien adversaire de Vaiana, Kotu choisit de s'unir à elle et son équipage pour les aider dans leur aventure.",
+      "type": "main"
+    },
+    {
+      "n": 34,
+      "name": "Loto",
+      "page": "Cap sur les îles du Pacifique",
+      "color": "#5bb7e8",
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#e8912d"
+      },
+      "description": "Loto, l'amie de Vaiana, est une ingénieure et inventrice très talentueuse. C'est elle qui a imaginé le nouveau canoë de Vaiana et de son équipage."
+    },
+    {
+      "n": 35,
+      "name": "Kele",
+      "page": "Cap sur les îles du Pacifique",
+      "color": "#5bb7e8",
+      "symbol": {
+        "icon": "valise",
+        "color": "#4fa84f"
+      },
+      "description": "Un peu grognon mais très gentil, Kele est un fermier de l'île de Motunui qui part à l'aventure aux côtés de Vaiana et de son équipage."
+    },
+    {
+      "n": 36,
+      "name": "Moni",
+      "page": "Cap sur les îles du Pacifique",
+      "color": "#5bb7e8",
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#3d8fd1"
+      },
+      "description": "Fort et charmant, Moni est un historien passionné, un grand conteur et un immense fan de Maui."
+    },
+    {
+      "n": 37,
+      "name": "Nemo",
+      "page": "Une Odyssée marine à travers les océans",
+      "color": [
+        "#1d4fa3",
+        "#4b2a8f"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#d64545"
+      },
+      "description": "Nemo, un adorable poisson-clown, vit sur un magnifique récif de corail avec son père adoré, Marin. Ils seraient totalement perdus l'un sans l'autre... et sans Dory."
+    },
+    {
+      "n": 38,
+      "name": "Marin",
+      "page": "Une Odyssée marine à travers les océans",
+      "color": [
+        "#1d4fa3",
+        "#4b2a8f"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#9a5bc4"
+      },
+      "description": "Papa très fier, Marin est aussi l'un des poissons les plus inquiets de l'océan. Toujours prêt à donner des conseils de sécurité, il n'en reste pas moins incroyablement courageux."
+    },
+    {
+      "n": 39,
+      "name": "Dory",
+      "page": "Une Odyssée marine à travers les océans",
+      "color": [
+        "#1d4fa3",
+        "#4b2a8f"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#e8912d"
+      },
+      "description": "Dans tout l'océan, il n'y a pas de poisson plus gentil, plus accueillant et plus sociable que Dory.",
+      "type": "brillant"
+    },
+    {
+      "n": 40,
+      "name": "Hank",
+      "page": "Une Odyssée marine à travers les océans",
+      "color": [
+        "#1d4fa3",
+        "#4b2a8f"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#4fa84f"
+      },
+      "description": "La vie n'a pas été tendre avec Hank, qui est très grognon. Mais quand Dory arrive, elle lui apporte de l'amitié et lui rappelle qu'avec trois cœurs, on peut être un peu plus gentil."
+    },
+    {
+      "n": 41,
+      "name": "Crush et Squiz",
+      "page": "Une Odyssée marine à travers les océans",
+      "color": [
+        "#1d4fa3",
+        "#4b2a8f"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#3d8fd1"
+      },
+      "description": "Crush et Squiz, un duo père-fils décontracté, aident Marin et Dory à se mettre à l'abri après leur périlleuse rencontre avec les méduses."
+    },
+    {
+      "n": 42,
+      "name": "Lilo et Stitch",
+      "page": "Une Odyssée marine à travers les océans",
+      "color": [
+        "#1d4fa3",
+        "#4b2a8f"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#d64545"
+      },
+      "description": "Peu à peu, Lilo fait découvrir à Stitch la signification de l'« 'ohana », et le petit alien met de côté sa nature sauvage pour trouver sa place dans la famille."
+    },
+    {
+      "n": 43,
+      "name": "Jumba Jookiba",
+      "page": "Une Odyssée marine à travers les océans",
+      "color": [
+        "#1d4fa3",
+        "#4b2a8f"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#9a5bc4"
+      },
+      "description": "Le Dr Jumba Jookiba est un génie... mais il vaut mieux qu'il ne fasse pas trop de science, si l'on en croit Mme la présidente du Grand Conseil."
+    },
+    {
+      "n": 44,
+      "name": "Pikly",
+      "page": "Une Odyssée marine à travers les océans",
+      "color": [
+        "#1d4fa3",
+        "#4b2a8f"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#e8912d"
+      },
+      "description": "Grand amateur de la planète Terre, Pikly est parfois un peu excessif, avec sa voix aiguë, son air de tout connaître et sa manie de paniquer au mauvais moment."
+    },
+    {
+      "n": 45,
+      "name": "Angel",
+      "page": "Une Odyssée marine à travers les océans",
+      "color": [
+        "#1d4fa3",
+        "#4b2a8f"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#4fa84f"
+      },
+      "description": "Créée par Jumba Jookiba, Angel est une expérience génétique illégale. Elle est l'amoureuse de Stitch (ils s'appellent affectueusement « Boojiboo ») et son équivalent féminin."
+    },
+    {
+      "n": 46,
+      "name": "Mulan et Cri-Kee",
+      "page": "L'incroyable diversité de l'Asie",
+      "color": [
+        "#d4a017",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#3d8fd1"
+      },
+      "description": "Pour sauver son père, Mulan est prête à tout, même à se faire passer pour un homme et à prendre sa place dans l'armée, toujours accompagnée de son porte-bonheur Cri-Kee.",
+      "type": "brillant"
+    },
+    {
+      "n": 47,
+      "name": "Mushu",
+      "page": "L'incroyable diversité de l'Asie",
+      "color": [
+        "#d4a017",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#d64545"
+      },
+      "description": "Mushu, un petit dragon bavard et un brin casse-cou, accompagne Mulan dans ses aventures à l'armée et lui sera d'une grande aide !"
+    },
+    {
+      "n": 48,
+      "name": "Mulan et Li Shang",
+      "page": "L'incroyable diversité de l'Asie",
+      "color": [
+        "#d4a017",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#9a5bc4"
+      },
+      "description": "Après l'avalanche déclenchée par Mulan pour sauver l'armée, Li Shang survit grâce à elle. En découvrant qu'elle est une femme, il choisit de l'épargner par gratitude."
+    },
+    {
+      "n": 49,
+      "name": "Petit Frère",
+      "page": "L'incroyable diversité de l'Asie",
+      "color": [
+        "#d4a017",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#e8912d"
+      },
+      "description": "Petit Frère est le chien de Mulan qui l'aide dans les tâches ménagères."
+    },
+    {
+      "n": 50,
+      "name": "Mulan et Khan",
+      "page": "L'incroyable diversité de l'Asie",
+      "color": [
+        "#d4a017",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#4fa84f"
+      },
+      "description": "Khan, le cheval loyal de la famille Fa, est toujours là pour soutenir Mulan, même dans les moments les plus difficiles et les hivers les plus froids de Chine."
+    },
+    {
+      "n": 51,
+      "name": "Mowgli",
+      "page": "L'incroyable diversité de l'Asie",
+      "color": [
+        "#d4a017",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#3d8fd1"
+      },
+      "description": "Élevé dans la jungle par des loups, Mowgli vit de belles aventures avec Bagheera et Baloo avant de découvrir qu'il a aussi sa place parmi les humains."
+    },
+    {
+      "n": 52,
+      "name": "Baloo et Bagheera",
+      "page": "L'incroyable diversité de l'Asie",
+      "color": [
+        "#d4a017",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#d64545"
+      },
+      "description": "Ces amis de la jungle ne pourraient pas être plus différents : alors que Bagheera est sérieux et un peu anxieux, Baloo est détendu et très attachant."
+    },
+    {
+      "n": 53,
+      "name": "Junior",
+      "page": "L'incroyable diversité de l'Asie",
+      "color": [
+        "#d4a017",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#9a5bc4"
+      },
+      "description": "Junior est le seul éléphanteau du troupeau. Il se lie très vite d'amitié avec Mowgli et veille avec beaucoup d'attention à sa sécurité."
+    },
+    {
+      "n": 54,
+      "name": "Kaa",
+      "page": "L'incroyable diversité de l'Asie",
+      "color": [
+        "#d4a017",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#e8912d"
+      },
+      "description": "Kaa est un immense serpent doté d'un appétit tout aussi gigantesque. Son regard hypnotique est ce qu'il y a de plus dangereux."
+    },
+    {
+      "n": 55,
+      "name": "Aladdin",
+      "page": "Un voyage vers des royaumes lointains",
+      "color": [
+        "#7a3fc4",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#4fa84f"
+      },
+      "description": "Aladdin connaît tous les chemins et recoins autour d'Agrabah. Avec Abu, il est prêt à défier n'importe qui."
+    },
+    {
+      "n": 56,
+      "name": "Jasmine",
+      "page": "Un voyage vers des royaumes lointains",
+      "color": [
+        "#7a3fc4",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#3d8fd1"
+      },
+      "description": "Curieuse et pleine d'envie de découverte, Jasmine ne manque jamais une occasion d'explorer le monde.",
+      "type": "etoiles"
+    },
+    {
+      "n": 57,
+      "name": "Abu",
+      "page": "Un voyage vers des royaumes lointains",
+      "color": [
+        "#7a3fc4",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#d64545"
+      },
+      "description": "Même quand Abu fait des bêtises et cause des ennuis à Aladdin, ce dernier aime toujours son petit compagnon."
+    },
+    {
+      "n": 58,
+      "name": "Génie",
+      "page": "Un voyage vers des royaumes lointains",
+      "color": [
+        "#7a3fc4",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#9a5bc4"
+      },
+      "description": "Même enfermé dans la lampe, l'esprit du Génie est libre. Il peut voir le passé et l'avenir, mais jamais ce qui l'attend lui-même."
+    },
+    {
+      "n": 59,
+      "name": "Simba",
+      "page": "Un voyage vers des royaumes lointains",
+      "color": [
+        "#7a3fc4",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#4fa84f"
+      },
+      "description": "Simba vit une vie insouciante dans une oasis, loin de la Terre des Lions, avant de réaliser qu'il est temps de rentrer et d'accepter son destin."
+    },
+    {
+      "n": 60,
+      "name": "Nala",
+      "page": "Un voyage vers des royaumes lointains",
+      "color": [
+        "#7a3fc4",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#e8912d"
+      },
+      "description": "Comme Simba, Nala est curieuse et adore explorer le monde qui l'entoure."
+    },
+    {
+      "n": 61,
+      "name": "Mufasa et Rafiki",
+      "page": "Un voyage vers des royaumes lointains",
+      "color": [
+        "#7a3fc4",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#3d8fd1"
+      },
+      "description": "C'est à Rafiki qu'il revient de présenter au peuple de la Terre des Lions le fils de Mufasa et Sarabi, Simba, l'héritier."
+    },
+    {
+      "n": 62,
+      "name": "Scar",
+      "page": "Un voyage vers des royaumes lointains",
+      "color": [
+        "#7a3fc4",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#d64545"
+      },
+      "description": "Rusé et charmeur, Scar est prêt à tout pour accéder au pouvoir, même à trahir son propre frère."
+    },
+    {
+      "n": 63,
+      "name": "Timon et Pumbaa",
+      "page": "Un voyage vers des royaumes lointains",
+      "color": [
+        "#7a3fc4",
+        "#f2c200"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#9a5bc4"
+      },
+      "description": "Quand Simba doit agir pour sauver la Terre des Lions, Pumbaa et Timon se rendent compte qu'ils sont de vrais héros dans l'âme, même s'ils restent un peu maladroits et rigolos."
+    },
+    {
+      "n": 64,
+      "name": "Rémy",
+      "page": "Plein feu sur la ville lumière",
+      "color": [
+        "#f2c200",
+        "#ec6fa8"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#e8912d"
+      },
+      "description": "Avec son odorat incroyable et son talent pour mélanger les saveurs, Rémy est un rat vraiment unique en France."
+    },
+    {
+      "n": 65,
+      "name": "Émile",
+      "page": "Plein feu sur la ville lumière",
+      "color": [
+        "#f2c200",
+        "#ec6fa8"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#4fa84f"
+      },
+      "description": "Un peu rond et d'un naturel joyeux, Émile aime la vie et tout ce qui se mange... et même ce qui ne se mange pas !"
+    },
+    {
+      "n": 66,
+      "name": "Linguini",
+      "page": "Plein feu sur la ville lumière",
+      "color": [
+        "#f2c200",
+        "#ec6fa8"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#3d8fd1"
+      },
+      "description": "Lorsque Linguini se rend compte que Rémy comprend tout, il lui demande de l'aider à refaire la soupe qui a eu tant de succès !"
+    },
+    {
+      "n": 67,
+      "name": "Colette",
+      "page": "Plein feu sur la ville lumière",
+      "color": [
+        "#f2c200",
+        "#ec6fa8"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#d64545"
+      },
+      "description": "Cuisinière chevronnée, Colette est d'abord exaspérée de devoir être la « baby-sitter » de ce jeunot de Linguini."
+    },
+    {
+      "n": 68,
+      "name": "Gusteau",
+      "page": "Plein feu sur la ville lumière",
+      "color": [
+        "#f2c200",
+        "#ec6fa8"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#9a5bc4"
+      },
+      "description": "Auguste Gusteau, le plus grand chef de France, est le guide imaginaire et le mentor de Rémy."
+    },
+    {
+      "n": 69,
+      "name": "Marie",
+      "page": "Plein feu sur la ville lumière",
+      "color": [
+        "#f2c200",
+        "#ec6fa8"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#e8912d"
+      },
+      "description": "Marie est l'un des chatons de Duchesse qui se prend pour une vraie dame. Rêveuse dans l'âme, elle a toujours la tête dans les nuages.",
+      "type": "etoiles"
+    },
+    {
+      "n": 70,
+      "name": "Thomas O'Malley",
+      "page": "Plein feu sur la ville lumière",
+      "color": [
+        "#f2c200",
+        "#ec6fa8"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#4fa84f"
+      },
+      "description": "Thomas O'Malley savoure la liberté d'une vie au grand air, sans responsabilités, jusqu'au jour où il tombe amoureux de Duchesse."
+    },
+    {
+      "n": 71,
+      "name": "Duchesse",
+      "page": "Plein feu sur la ville lumière",
+      "color": [
+        "#f2c200",
+        "#ec6fa8"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#3d8fd1"
+      },
+      "description": "Duchesse est très protectrice envers ses chatons et s'efforce de leur apprendre à devenir de parfaits membres de la société française."
+    },
+    {
+      "n": 72,
+      "name": "Marie et Berlioz",
+      "page": "Plein feu sur la ville lumière",
+      "color": [
+        "#f2c200",
+        "#ec6fa8"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#d64545"
+      },
+      "description": "Berlioz, le frère de Marie, est malicieux et difficile à impressionner. Mais c'est aussi un chaton au grand cœur et un excellent pianiste."
+    },
+    {
+      "n": 73,
+      "name": "Belle",
+      "page": "Un tour d'Europe plein de charme",
+      "color": [
+        "#f2c200",
+        "#14a39a"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#9a5bc4"
+      },
+      "description": "Prenant conscience que le monde est bien plus vaste que son petit village, Belle rêve de partir à l'aventure avec son cheval Philibert."
+    },
+    {
+      "n": 74,
+      "name": "La Bête",
+      "page": "Un tour d'Europe plein de charme",
+      "color": [
+        "#f2c200",
+        "#14a39a"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#e8912d"
+      },
+      "description": "Derrière son tempérament colérique, la Bête cache une grande gentillesse et entretient une relation affectueuse avec nombre de ses serviteurs."
+    },
+    {
+      "n": 75,
+      "name": "Big Ben",
+      "page": "Un tour d'Europe plein de charme",
+      "color": [
+        "#f2c200",
+        "#14a39a"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#4fa84f"
+      },
+      "description": "Très investi dans la gestion du château, Big Ben prend son rôle très à cœur, ce qui peut le faire paraître un peu autoritaire."
+    },
+    {
+      "n": 76,
+      "name": "Lumière",
+      "page": "Un tour d'Europe plein de charme",
+      "color": [
+        "#f2c200",
+        "#14a39a"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#3d8fd1"
+      },
+      "description": "Rebelle mais plein d'espoir, Lumière est convaincu que la Bête finira par trouver l'amour et que les objets enchantés redeviendront humains.",
+      "type": "oeil"
+    },
+    {
+      "n": 77,
+      "name": "Mme Samovar et Zip",
+      "page": "Un tour d'Europe plein de charme",
+      "color": [
+        "#f2c200",
+        "#14a39a"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#d64545"
+      },
+      "description": "Toujours partant pour l'aventure, Zip a une imagination tellement vive que sa maman n'a pas cru, au début, qu'il y avait vraiment une jeune fille dans le château."
+    },
+    {
+      "n": 78,
+      "name": "Raiponce",
+      "page": "Un tour d'Europe plein de charme",
+      "color": [
+        "#f2c200",
+        "#14a39a"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#9a5bc4"
+      },
+      "description": "Raiponce, la jeune fille aux longs cheveux dorés, est une adolescente pleine de vie et d'énergie, qui passe ses journées à dessiner, lire et laisser libre cours à son imagination."
+    },
+    {
+      "n": 79,
+      "name": "Flynn Rider",
+      "page": "Un tour d'Europe plein de charme",
+      "color": [
+        "#f2c200",
+        "#14a39a"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#e8912d"
+      },
+      "description": "Depuis toujours, Flynn Rider se sort de situations délicates grâce à son intelligence et son charme... jusqu'à sa rencontre avec Raiponce."
+    },
+    {
+      "n": 80,
+      "name": "Maximus",
+      "page": "Un tour d'Europe plein de charme",
+      "color": [
+        "#f2c200",
+        "#14a39a"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#4fa84f"
+      },
+      "description": "Autrefois lancé à la poursuite de Flynn Rider, Maximus devient l'un des porteurs d'alliances lors du mariage de Flynn et Raiponce !"
+    },
+    {
+      "n": 81,
+      "name": "Pascal",
+      "page": "Un tour d'Europe plein de charme",
+      "color": [
+        "#f2c200",
+        "#14a39a"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#3d8fd1"
+      },
+      "description": "Seul véritable ami de Raiponce, Pascal l'aide à croire en elle et l'encourage à sortir de la tour pour réaliser ses rêves."
+    },
+    {
+      "n": 82,
+      "name": "Pongo",
+      "page": "Traversée royale au cœur du Royaume-Uni",
+      "color": [
+        "#1a1a1a",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#d64545"
+      },
+      "description": "Pongo est un grand romantique, c'est d'ailleurs grâce à lui que son maître Roger a rencontré Anita !"
+    },
+    {
+      "n": 83,
+      "name": "Perdita",
+      "page": "Traversée royale au cœur du Royaume-Uni",
+      "color": [
+        "#1a1a1a",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#9a5bc4"
+      },
+      "description": "Élégante et pleine de bonnes manières, Perdita peut être anxieuse, mais reste avant tout une maman courageuse et très aimante."
+    },
+    {
+      "n": 84,
+      "name": "Patch",
+      "page": "Traversée royale au cœur du Royaume-Uni",
+      "color": [
+        "#1a1a1a",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#e8912d"
+      },
+      "description": "Patch a trente-deux taches ! C'est le seul chiot né avec des taches noires : les autres étaient tout blancs au début."
+    },
+    {
+      "n": 85,
+      "name": "Rolly",
+      "page": "Traversée royale au cœur du Royaume-Uni",
+      "color": [
+        "#1a1a1a",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#4fa84f"
+      },
+      "description": "Malicieux et plein d'énergie, Rolly est un chiot bien rond avec un flair impressionnant."
+    },
+    {
+      "n": 86,
+      "name": "Lucky",
+      "page": "Traversée royale au cœur du Royaume-Uni",
+      "color": [
+        "#1a1a1a",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#3d8fd1"
+      },
+      "description": "Timide et discret, Lucky tient son nom du fait qu'il est chanceux d'avoir survécu après une naissance difficile.",
+      "type": "main"
+    },
+    {
+      "n": 87,
+      "name": "Peter Pan",
+      "page": "Traversée royale au cœur du Royaume-Uni",
+      "color": [
+        "#1a1a1a",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#d64545"
+      },
+      "description": "Peter Pan, « celui qui ne veut jamais grandir », est un jeune garçon espiègle qui adore passer son temps à s'amuser et à jouer au Pays Imaginaire."
+    },
+    {
+      "n": 88,
+      "name": "La Fée Clochette",
+      "page": "Traversée royale au cœur du Royaume-Uni",
+      "color": [
+        "#1a1a1a",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#9a5bc4"
+      },
+      "description": "La fée Clochette rêve d'aventures et est capable de produire de la poussière de fée, celle qui donne à elle-même et aux autres la capacité de voler."
+    },
+    {
+      "n": 89,
+      "name": "Capitaine Crochet",
+      "page": "Traversée royale au cœur du Royaume-Uni",
+      "color": [
+        "#1a1a1a",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#e8912d"
+      },
+      "description": "La seule chose qui effraie Crochet, c'est le tic-tac du terrible crocodile affamé, celui qui l'a déjà mordu autrefois."
+    },
+    {
+      "n": 90,
+      "name": "Monsieur Mouche",
+      "page": "Traversée royale au cœur du Royaume-Uni",
+      "color": [
+        "#1a1a1a",
+        "#2f9e5a"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#4fa84f"
+      },
+      "description": "Même si c'est un pirate, Monsieur Mouche possède un sens, un peu personnel, de l'honneur et de l'éthique."
+    },
+    {
+      "n": 91,
+      "name": "Elsa",
+      "page": "En route vers la magie des lumières du Nord",
+      "color": "#9fdcf5",
+      "symbol": {
+        "icon": "photo",
+        "color": "#3d8fd1"
+      },
+      "description": "Grâce à l'amour qui l'entoure, Elsa se sent acceptée comme elle est et rêve d'un monde où tout le monde se sentirait ainsi."
+    },
+    {
+      "n": 92,
+      "name": "Anna",
+      "page": "En route vers la magie des lumières du Nord",
+      "color": "#9fdcf5",
+      "symbol": {
+        "icon": "tongs",
+        "color": "#d64545"
+      },
+      "description": "Curieuse, entreprenante et enthousiaste, Anna aime parcourir le monde pour découvrir de nouveaux horizons au-delà des frontières d'Arendelle.",
+      "type": "etoiles"
+    },
+    {
+      "n": 93,
+      "name": "Kristoff",
+      "page": "En route vers la magie des lumières du Nord",
+      "color": "#9fdcf5",
+      "symbol": {
+        "icon": "carte",
+        "color": "#9a5bc4"
+      },
+      "description": "Kristoff a été élevé dans les montagnes par les trolls et préfère la compagnie des rennes à celle des humains !"
+    },
+    {
+      "n": 94,
+      "name": "Olaf",
+      "page": "En route vers la magie des lumières du Nord",
+      "color": "#9fdcf5",
+      "symbol": {
+        "icon": "photo",
+        "color": "#d64545"
+      },
+      "description": "Olaf ne peut pas vivre sans le froid et la neige, mais son rêve le plus cher est de connaître l'été."
+    },
+    {
+      "n": 95,
+      "name": "Bruni",
+      "page": "En route vers la magie des lumières du Nord",
+      "color": "#9fdcf5",
+      "symbol": {
+        "icon": "valise",
+        "color": "#4fa84f"
+      },
+      "description": "Ce n'est que lorsque Bruni, la salamandre, grimpe dans la paume d'Elsa et s'apaise que ses flammes disparaissent."
+    },
+    {
+      "n": 96,
+      "name": "Elsa et Nokk",
+      "page": "En route vers la magie des lumières du Nord",
+      "color": "#9fdcf5",
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#3d8fd1"
+      },
+      "description": "Au départ, Nokk essaie d'emmener Elsa sous l'eau, mais elle réussit à le maîtriser et ils forment alors une équipe inséparable."
+    },
+    {
+      "n": 97,
+      "name": "Sven",
+      "page": "En route vers la magie des lumières du Nord",
+      "color": "#9fdcf5",
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#e8912d"
+      },
+      "description": "Toujours prêt à aider, Sven serait capable de nager dans un fjord glacé pour sauver un ami."
+    },
+    {
+      "n": 98,
+      "name": "Anna et Elsa",
+      "page": "En route vers la magie des lumières du Nord",
+      "color": "#9fdcf5",
+      "symbol": {
+        "icon": "tongs",
+        "color": "#9a5bc4"
+      },
+      "description": "Malgré les lourdes responsabilités du royaume, Elsa et Anna restent profondément liées."
+    },
+    {
+      "n": 99,
+      "name": "Olaf",
+      "page": "En route vers la magie des lumières du Nord",
+      "color": "#9fdcf5",
+      "symbol": {
+        "icon": "carte",
+        "color": "#e8912d"
+      },
+      "description": "Olaf est un petit bonhomme de neige heureux. Il adore les câlins, mais doit faire attention à ne pas fondre au soleil. C'est pourquoi Elsa a créé pour lui son propre nuage de neige."
+    },
+    {
+      "n": 100,
+      "name": "Nick Wilde",
+      "page": "Envol pour un monde qui dépasse les frontières",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#4fa84f"
+      },
+      "description": "Ancien escroc devenu policier, Nick a beaucoup d'idées... et encore beaucoup à apprendre sur le travail en équipe."
+    },
+    {
+      "n": 101,
+      "name": "Judy Hopps",
+      "page": "Envol pour un monde qui dépasse les frontières",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#3d8fd1"
+      },
+      "description": "Judy est bien décidée à montrer que, même toute petite, elle peut être aussi forte et talentueuse que les autres."
+    },
+    {
+      "n": 102,
+      "name": "Chef Bogo",
+      "page": "Envol pour un monde qui dépasse les frontières",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#d64545"
+      },
+      "description": "Au début un peu agacé d'être associé à Judy, le chef Bogo apprend peu à peu à la respecter, et ils forment finalement une très bonne équipe."
+    },
+    {
+      "n": 103,
+      "name": "Gary De'Snake",
+      "page": "Envol pour un monde qui dépasse les frontières",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "photo",
+        "color": "#9a5bc4"
+      },
+      "description": "Vipère gentille, enthousiaste et venimeuse, Gary s'est donné pour mission de redorer le blason de sa famille en résolvant un vieux mystère de Zootopie.",
+      "type": "oeil"
+    },
+    {
+      "n": 104,
+      "name": "Nibbles Maplestick",
+      "page": "Envol pour un monde qui dépasse les frontières",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "tongs",
+        "color": "#e8912d"
+      },
+      "description": "Nibbles est toujours ravie d'aider Nick et Judy, et rêve de transformer leur duo en un véritable trio."
+    },
+    {
+      "n": 105,
+      "name": "Bob",
+      "page": "Envol pour un monde qui dépasse les frontières",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "carte",
+        "color": "#4fa84f"
+      },
+      "description": "En réalité, Bob est bien meilleur pour faire rire les enfants que pour leur faire peur !"
+    },
+    {
+      "n": 106,
+      "name": "Sulli",
+      "page": "Envol pour un monde qui dépasse les frontières",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "chapeau",
+        "color": "#3d8fd1"
+      },
+      "description": "Sulli est une vraie terreur d'élite, la meilleure pendant 36 mois d'affilée, jusqu'à sa rencontre avec Bouh..."
+    },
+    {
+      "n": 107,
+      "name": "Bouh",
+      "page": "Envol pour un monde qui dépasse les frontières",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "valise",
+        "color": "#d64545"
+      },
+      "description": "Petite fille naïve et joyeuse, Bouh s'attache immédiatement à Sulli qui la protégera des dangers qui pèsent sur elle dans le monde des monstres."
+    },
+    {
+      "n": 108,
+      "name": "Germaine",
+      "page": "Envol pour un monde qui dépasse les frontières",
+      "color": [
+        "#f08a1c",
+        "#7a3fc4"
+      ],
+      "symbol": {
+        "icon": "lunettes",
+        "color": "#9a5bc4"
+      },
+      "description": "Grincheuse et ne souriant jamais, Germaine est l'administratrice du niveau Terreur F et se révèle être un agent infiltré de l'Agence de détection des enfants."
+    },
+    {
+      "n": 109,
+      "name": "Anna et Elsa",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 110,
+      "name": "Baloo",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 111,
+      "name": "Bambi",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 112,
+      "name": "Bob",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 113,
+      "name": "Buzz l'Éclair",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 114,
+      "name": "Colère",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 115,
+      "name": "Dory",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 116,
+      "name": "Fée Clochette",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 117,
+      "name": "Flash McQueen",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 118,
+      "name": "Jasmine",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 119,
+      "name": "Joie",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 120,
+      "name": "Marie",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 121,
+      "name": "Minnie Mouse",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 122,
+      "name": "Mowgli",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 123,
+      "name": "Nemo",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 124,
+      "name": "Nick et Judy",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 125,
+      "name": "Olaf",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 126,
+      "name": "Panpan",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 127,
+      "name": "Rémy",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 128,
+      "name": "Simba",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 129,
+      "name": "Stitch et Angel",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 130,
+      "name": "Timon et Pumbaa",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 131,
+      "name": "Vaiana",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    },
+    {
+      "n": 132,
+      "name": "Woody",
+      "kind": "fixeez",
+      "label": "",
+      "page": "Fixeez (autocollants)",
+      "color": "#e0a100"
+    }
+  ]
+}
