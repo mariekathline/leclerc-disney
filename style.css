@@ -51,7 +51,7 @@ h1 { font-size: 1.1rem; margin: 0; }
 .subtitle:empty { display: none; }
 h2 { font-size: .95rem; margin: 22px 0 8px; }
 select, input[type=text], input[type=url] {
-  font: inherit; color: var(--ink); background: var(--card);
+  font: inherit; font-size: 16px; /* 16px minimum : évite le zoom automatique d'iOS dans les champs */ color: var(--ink); background: var(--card);
   border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;
 }
 .progress { margin-top: 8px; }
@@ -144,7 +144,7 @@ main { padding: 12px 16px; max-width: 720px; margin: 0 auto; }
 .qr { background: #fff; padding: 12px; border-radius: 10px; max-width: 320px; margin: 0 auto; border: 1px solid var(--line); }
 .qr svg { display: block; width: 100%; height: auto; }
 
-#scanner video { width: 100%; border-radius: 10px; background: #000; margin-top: 8px; }
+
 
 .trade-box { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
 .trade-box h3 { margin: 0 0 8px; font-size: .95rem; }
@@ -232,3 +232,30 @@ dialog#welcome::backdrop { background: rgba(0, 0, 0, .5); }
 /* Boutons centrés dans les fenêtres */
 dialog .btn { margin-left: auto; margin-right: auto; }
 .stepper, .actions { justify-content: center; }
+
+/* Champs de saisie : 16px minimum partout (zoom iOS) */
+input, select, textarea { font-size: 16px; }
+
+/* Installation de l'appli */
+.banner { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+.banner p { margin: 0 0 4px; font-size: .9rem; }
+.banner-actions { display: flex; gap: 8px; }
+.banner-actions .btn { margin-top: 8px; padding: 9px 12px; }
+.steps ol { margin: 4px 0 8px; padding-left: 22px; }
+.steps li { margin: 6px 0; font-size: .92rem; }
+.ico.inline { width: 1.1em; height: 1.1em; vertical-align: -0.2em; }
+
+/* Scanner QR en fenêtre modale */
+dialog#scanner {
+  border: 0; border-radius: 14px; padding: 16px; width: min(94vw, 420px);
+  background: var(--card); color: var(--ink); box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
+}
+dialog#scanner::backdrop { background: rgba(0, 0, 0, .65); }
+#sc-title { margin: 0 0 10px; font-size: 1.05rem; }
+#scanner video { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; background: #000; }
+#sc-msg { margin: 8px 0 0; text-align: center; }
+
+/* Vignettes cochables dans un échange */
+button.chip.sel { font: inherit; font-size: .88rem; color: var(--ink); cursor: pointer; opacity: .5; }
+button.chip.sel.on { opacity: 1; background: var(--dup-line); border-color: var(--dup-line); color: #12333b; }
+button.chip.sel small { color: inherit; }

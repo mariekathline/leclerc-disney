@@ -9,6 +9,7 @@ const $$ = (sel) => [...document.querySelectorAll(sel)];
 function h(tag, props = {}, ...children) {
   const el = document.createElement(tag);
   for (const [k, v] of Object.entries(props)) {
+    if (v == null || v === false) continue; // pas d'attribut "null" (ex. disabled)
     if (k === 'class') el.className = v;
     else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
     else el.setAttribute(k, v);
@@ -30,9 +31,9 @@ let state = loadState();  // { current, name, counts: { [editionId]: number[] } 
 function loadState() {
   try {
     const s = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    if (s && typeof s === 'object') return { current: s.current || null, name: s.name || '', welcomed: !!s.welcomed, counts: s.counts || {} };
+    if (s && typeof s === 'object') return { current: s.current || null, name: s.name || '', welcomed: !!s.welcomed, installDismissed: !!s.installDismissed, trades: Array.isArray(s.trades) ? s.trades : [], lastTrade: s.lastTrade || null, counts: s.counts || {} };
   } catch (_) { /* stockage indisponible ou corrompu */ }
-  return { current: null, name: '', welcomed: false, counts: {} };
+  return { current: null, name: '', welcomed: false, installDismissed: false, trades: [], lastTrade: null, counts: {} };
 }
 
 function saveState() {
@@ -360,15 +361,7 @@ function parseShare(hash) {
 }
 
 function renderQR() {
-  const box = $('#qr');
-  try {
-    const qr = qrcode(0, 'M');
-    qr.addData(shareURL());
-    qr.make();
-    box.innerHTML = qr.createSvgTag(4, 0);
-  } catch (_) {
-    box.textContent = 'QR code indisponible (trop de vignettes ?)';
-  }
+  qrInto($('#qr'), shareURL());
 }
 
 $('#my-name').addEventListener('input', (e) => {
@@ -395,61 +388,237 @@ $('#link-btn').addEventListener('click', () => copyText(shareURL(), 'Lien copié
 
 // ---------- Échanges ----------
 
+let sel = { give: new Set(), get: new Set() }; // indices cochés dans l'échange en préparation
+let incoming = null;  // confirmation reçue d'un pote (lien #/x/…)
+let doneTrade = null; // échange que je viens de confirmer (affiche le QR de confirmation)
+
+async function ensureEdition(id) {
+  if (id === collection.id) return true;
+  if (!editions.some((e) => e.id === id)) { toast(`Édition « ${id} » inconnue`); return false; }
+  await loadCollection(id);
+  renderEditionSelect();
+  renderAll();
+  return true;
+}
+
 async function openFriend(f) {
-  if (f.id !== collection.id) {
-    if (!editions.some((e) => e.id === f.id)) return toast(`Édition « ${f.id} » inconnue`);
-    await loadCollection(f.id);
-    renderEditionSelect();
-    renderAll();
-  }
-  friend = f;
+  if (!(await ensureEdition(f.id))) return;
+  friend = f; incoming = null; doneTrade = null;
+  // sélection par défaut : autant de vignettes de chaque côté (échange équitable)
+  const { iGive, theyGive } = tradeLists();
+  const n = Math.min(iGive.length, theyGive.length);
+  sel = { give: new Set(iGive.slice(0, n)), get: new Set(theyGive.slice(0, n)) };
   renderFriend();
   showView('trade');
 }
 
-function renderFriend() {
-  const box = $('#friend-result');
-  if (!friend) { box.hidden = true; $('#trade-home').hidden = false; return; }
+// Indices des vignettes que je peux donner (double chez moi, manquante chez lui) et qu'il peut me donner.
+function tradeLists() {
   const mine = myCounts();
   const theirs = collection.items.map((_, i) => clamp(friend.counts[i]));
   const iGive = [], theyGive = [];
-  collection.items.forEach((item, i) => {
-    if (mine[i] > 1 && theirs[i] === 0) iGive.push(item);
-    if (theirs[i] > 1 && mine[i] === 0) theyGive.push(item);
+  collection.items.forEach((_, i) => {
+    if (mine[i] > 1 && theirs[i] === 0) iGive.push(i);
+    if (theirs[i] > 1 && mine[i] === 0) theyGive.push(i);
   });
+  return { iGive, theyGive };
+}
+
+const itemsText = (idx) => idx.map((i) => lab(collection.items[i]) + (collection.items[i].name ? ' ' + collection.items[i].name : '')).join(', ');
+const indexOfN = (n) => collection.items.findIndex((it) => it.n === n);
+
+function qrInto(box, url) {
+  try {
+    const qr = qrcode(0, 'M');
+    qr.addData(url);
+    qr.make();
+    box.innerHTML = qr.createSvgTag(4, 0);
+  } catch (_) {
+    box.textContent = 'QR code indisponible (trop de vignettes ?)';
+  }
+}
+
+function newTradeId() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+}
+
+// Applique un échange à MA collection : give = indices que je donne (-1), get = indices que je reçois (+1).
+function applyTrade(id, give, get) {
+  const arr = myCounts();
+  give.forEach((i) => { arr[i] = clamp(arr[i] - 1); });
+  get.forEach((i) => { arr[i] = clamp(arr[i] + 1); });
+  state.counts[collection.id] = arr;
+  state.trades = [...state.trades.filter((t) => t !== id), id].slice(-100);
+  state.lastTrade = { id, edition: collection.id, give, get };
+  saveState();
+  renderAll();
+}
+
+function undoLastTrade() {
+  const t = state.lastTrade;
+  if (!t || t.edition !== collection.id) return toast('Rien à annuler pour cette édition');
+  const arr = myCounts();
+  t.give.forEach((i) => { arr[i] = clamp(arr[i] + 1); });
+  t.get.forEach((i) => { arr[i] = clamp(arr[i] - 1); });
+  state.counts[collection.id] = arr;
+  state.trades = state.trades.filter((x) => x !== t.id); // le lien de confirmation pourra être rescanné
+  state.lastTrade = null;
+  saveState();
+  renderAll();
+  renderLastTrade();
+  toast('Échange annulé : tes compteurs sont remis comme avant');
+}
+
+function renderLastTrade() {
+  const t = state.lastTrade;
+  const box = $('#last-trade');
+  box.hidden = !t || t.edition !== collection.id;
+  if (box.hidden) return;
+  $('#last-trade-text').textContent = `Dernier échange : tu as donné ${t.give.length}, reçu ${t.get.length}.`;
+}
+
+function closeTrade() {
+  friend = null; incoming = null; doneTrade = null;
+  history.replaceState(null, '', location.pathname);
+  renderFriend();
+}
+
+const manualBtn = () => h('button', { class: 'btn ghost', type: 'button', onclick: () => { closeTrade(); showView('collection'); toast('Corrige à la main avec + / −'); } }, 'Corriger à la main');
+
+function selChip(item, i, side) {
+  const on = sel[side].has(i);
+  return h('button', { class: 'chip sel' + (on ? ' on' : ''), type: 'button', 'data-i': i, 'data-side': side, 'aria-pressed': on ? 'true' : 'false' },
+    h('b', {}, lab(item)), item.name ? h('small', {}, ' ' + item.name) : null);
+}
+
+function selBox(title, idx, side, emptyText) {
+  return h('div', { class: 'trade-box' },
+    h('h3', {}, title),
+    idx.length ? h('div', { class: 'chips' }, ...idx.map((i) => selChip(collection.items[i], i, side))) : h('p', { class: 'hint' }, emptyText));
+}
+
+function renderFriend() {
+  const box = $('#friend-result');
+  renderLastTrade();
+  if (doneTrade) return renderDone(box);
+  if (incoming) return renderIncoming(box);
+  if (!friend) { box.hidden = true; $('#trade-home').hidden = false; return; }
+  const { iGive, theyGive } = tradeLists();
   const who = friend.name || 'ton pote';
   $('#friend-title').textContent = `Échange avec ${who}`;
+  const giveSel = iGive.filter((i) => sel.give.has(i)), getSel = theyGive.filter((i) => sel.get.has(i));
   const body = $('#friend-body');
   body.replaceChildren(
-    tradeBox(`Tu peux donner à ${who} (${iGive.length})`, iGive, 'Rien : tes doubles ne lui manquent pas.'),
-    tradeBox(`${who} peut te donner (${theyGive.length})`, theyGive, 'Rien : ses doubles ne te manquent pas.'),
+    h('p', { class: 'hint' }, iGive.length || theyGive.length
+      ? 'Touche une vignette pour l\'ajouter ou la retirer de l\'échange. Une seule personne confirme : l\'autre scanne ensuite le QR de confirmation pour que ça se coche aussi chez lui.'
+      : 'Rien à échanger pour cette fois.'),
+    selBox(`Tu donnes à ${who} (${giveSel.length}/${iGive.length})`, iGive, 'give', 'Rien : tes doubles ne lui manquent pas.'),
+    selBox(`${who} te donne (${getSel.length}/${theyGive.length})`, theyGive, 'get', 'Rien : ses doubles ne te manquent pas.'),
+    h('button', {
+      class: 'btn', type: 'button', disabled: giveSel.length + getSel.length ? null : 'true',
+      onclick: () => confirmTrade(giveSel, getSel),
+    }, giveSel.length + getSel.length ? `Confirmer l'échange (${giveSel.length} contre ${getSel.length})` : 'Confirmer l\'échange'),
+    manualBtn(),
   );
-  const n = Math.min(iGive.length, theyGive.length);
-  body.prepend(h('p', { class: 'hint' }, n
-    ? `Échange équitable possible : ${n} contre ${n}.`
-    : (iGive.length || theyGive.length ? 'Pas d\'échange équitable, mais un don est possible.' : 'Rien à échanger pour cette fois.')));
+  $('#friend-close').textContent = 'Annuler';
   box.hidden = false;
   $('#trade-home').hidden = true;
 }
 
-function tradeBox(title, items, emptyText) {
-  return h('div', { class: 'trade-box' },
-    h('h3', {}, title),
-    items.length ? h('div', { class: 'chips' }, ...items.map((it) => chip(it, '', true))) : h('p', { class: 'hint' }, emptyText));
+function confirmTrade(give, get) {
+  const who = friend.name || 'ton pote';
+  if (!confirm(`Confirmer l'échange avec ${who} ?\n\nTu donnes : ${itemsText(give) || 'rien'}\nTu reçois : ${itemsText(get) || 'rien'}\n\nTa collection sera mise à jour tout de suite (tu pourras annuler).`)) return;
+  const id = newTradeId();
+  applyTrade(id, give, get);
+  doneTrade = { id, give, get, who };
+  renderFriend();
 }
 
-$('#friend-close').addEventListener('click', () => {
-  friend = null;
-  history.replaceState(null, '', location.pathname);
+function tradeURL(t) {
+  const base = location.origin + location.pathname;
+  const ns = (idx) => idx.map((i) => collection.items[i].n).join('.') || '-';
+  const name = state.name.trim();
+  return `${base}#/x/${encodeURIComponent(collection.id)}/${t.id}/${ns(t.give)}/${ns(t.get)}` + (name ? '/' + encodeURIComponent(name) : '');
+}
+
+function renderDone(box) {
+  const t = doneTrade;
+  $('#friend-title').textContent = 'Échange enregistré chez toi';
+  const qr = h('div', { class: 'qr' });
+  qrInto(qr, tradeURL(t));
+  $('#friend-body').replaceChildren(
+    h('p', { class: 'hint' }, `Ta collection est à jour. Pour que ${t.who} la mette à jour aussi, il scanne ce QR (avec l'appli ou son appareil photo) ou ouvre ce lien.`),
+    qr,
+    h('button', { class: 'btn ghost', type: 'button', onclick: () => copyText(tradeURL(t), 'Lien de confirmation copié') }, 'Copier le lien de confirmation'),
+    h('button', { class: 'btn danger', type: 'button', onclick: () => { undoLastTrade(); closeTrade(); } }, 'Annuler cet échange'),
+    manualBtn(),
+  );
+  $('#friend-close').textContent = 'Terminer';
+  box.hidden = false;
+  $('#trade-home').hidden = true;
+}
+
+function parseTrade(hash) {
+  const m = /^#\/x\/([^/]+)\/([a-z0-9]+)\/([\d.-]*)\/([\d.-]*)(?:\/(.*))?$/i.exec(hash || '');
+  if (!m) return null;
+  const nums = (s) => (s === '-' || !s ? [] : s.split('.').map(Number).filter(Number.isFinite));
+  let name = '';
+  try { name = m[5] ? decodeURIComponent(m[5]) : ''; } catch (_) { /* nom illisible : ignoré */ }
+  return { edition: decodeURIComponent(m[1]), id: m[2], senderGives: nums(m[3]), senderGets: nums(m[4]), name: name.slice(0, 20) };
+}
+
+async function openTrade(t) {
+  if (!(await ensureEdition(t.edition))) return;
+  friend = null; doneTrade = null; incoming = t;
+  renderFriend();
+  showView('trade');
+}
+
+function renderIncoming(box) {
+  const t = incoming;
+  const who = t.name || 'Ton pote';
+  const get = t.senderGives.map(indexOfN).filter((i) => i >= 0);   // je les reçois
+  const give = t.senderGets.map(indexOfN).filter((i) => i >= 0);   // je les donne
+  const already = state.trades.includes(t.id);
+  const mine = myCounts();
+  const lacking = give.filter((i) => mine[i] < 1);
+  $('#friend-title').textContent = `${who} a confirmé un échange`;
+  const body = $('#friend-body');
+  body.replaceChildren(
+    already ? h('p', { class: 'hint' }, 'Cet échange est déjà enregistré chez toi.') : h('p', { class: 'hint' }, 'Valide pour mettre ta collection à jour de ton côté.'),
+    h('div', { class: 'trade-box' }, h('h3', {}, `Tu reçois (${get.length})`), get.length ? h('div', { class: 'chips' }, ...get.map((i) => chip(collection.items[i], '', true))) : h('p', { class: 'hint' }, 'Rien')),
+    h('div', { class: 'trade-box' }, h('h3', {}, `Tu donnes (${give.length})`), give.length ? h('div', { class: 'chips' }, ...give.map((i) => chip(collection.items[i], '', true))) : h('p', { class: 'hint' }, 'Rien')),
+    lacking.length ? h('p', { class: 'hint' }, `Attention : tu n'as pas (ou plus) ${itemsText(lacking)}. Vérifie ta collection.`) : null,
+    h('button', {
+      class: 'btn', type: 'button', disabled: already ? 'true' : null,
+      onclick: () => { applyTrade(t.id, give, get); toast('Échange enregistré'); incoming = null; history.replaceState(null, '', location.pathname); renderFriend(); showView('collection'); },
+    }, 'Valider de mon côté'),
+    manualBtn(),
+  );
+  $('#friend-close').textContent = 'Refuser';
+  box.hidden = false;
+  $('#trade-home').hidden = true;
+}
+
+$('#friend-body').addEventListener('click', (e) => {
+  const b = e.target.closest('.chip.sel');
+  if (!b) return;
+  const set = sel[b.dataset.side], i = +b.dataset.i;
+  if (set.has(i)) set.delete(i); else set.add(i);
   renderFriend();
 });
+
+$('#friend-close').addEventListener('click', closeTrade);
+$('#undo-last').addEventListener('click', undoLastTrade);
 
 async function handleLink(text) {
   let hash = text;
   try { hash = new URL(text).hash; } catch (_) { /* déjà un fragment */ }
   const f = parseShare(hash);
-  if (!f) return toast('Ce lien n\'est pas un échange de vignettes');
-  await openFriend(f);
+  if (f) return openFriend(f);
+  const t = parseTrade(hash);
+  if (t) return openTrade(t);
+  toast('Ce lien n\'est pas un échange de vignettes');
 }
 
 $('#paste-link').addEventListener('change', async (e) => {
@@ -459,7 +628,9 @@ $('#paste-link').addEventListener('change', async (e) => {
 
 window.addEventListener('hashchange', () => {
   const f = parseShare(location.hash);
-  if (f) openFriend(f);
+  if (f) return openFriend(f);
+  const t = parseTrade(location.hash);
+  if (t) openTrade(t);
 });
 
 // ---------- Scanner QR ----------
@@ -483,8 +654,8 @@ async function startScan() {
   const video = $('#video');
   video.srcObject = stream;
   await video.play();
-  $('#scanner').hidden = false;
-  $('#scan-btn').hidden = true;
+  $('#sc-msg').textContent = 'Cadre le QR code affiché sur son téléphone.';
+  $('#scanner').showModal();
   scanning = true;
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
@@ -497,11 +668,12 @@ async function startScan() {
       ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
       const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
       const code = jsQR(img.data, img.width, img.height, { inversionAttempts: 'dontInvert' });
-      if (code && parseShare(safeHash(code.data))) {
+      if (code && (parseShare(safeHash(code.data)) || parseTrade(safeHash(code.data)))) {
         stopScan();
         await handleLink(code.data);
         return;
       }
+      if (code) $('#sc-msg').textContent = 'Ce QR code n\'est pas un échange de vignettes.';
     }
     requestAnimationFrame(tick);
   };
@@ -516,12 +688,13 @@ function stopScan() {
   scanning = false;
   if (stream) stream.getTracks().forEach((t) => t.stop());
   stream = null;
-  $('#scanner').hidden = true;
-  $('#scan-btn').hidden = false;
+  const dlg = $('#scanner');
+  if (dlg.open) dlg.close();
 }
 
 $('#scan-btn').addEventListener('click', startScan);
 $('#scan-stop').addEventListener('click', stopScan);
+$('#scanner').addEventListener('close', stopScan); // fermeture par Échap ou retour
 
 // ---------- Sauvegarde ----------
 
@@ -606,6 +779,39 @@ function toast(text) {
   toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
 }
 
+// ---------- Installation (PWA) ----------
+
+let installEvent = null; // Chrome / Android / bureau : prompt natif ; iOS n'en a pas (Partager → Sur l'écran d'accueil)
+const isStandalone = () => window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const isAndroid = () => /android/i.test(navigator.userAgent);
+
+function renderInstall() {
+  const installed = isStandalone();
+  $('#install').hidden = installed;
+  $('#install-banner').hidden = installed || state.installDismissed;
+  if (installed) return;
+  $('#install-btn').hidden = !installEvent;
+  const ios = isIOS(), android = !ios && isAndroid();
+  $('#install-ios').hidden = !ios;
+  $('#install-android').hidden = !android || !!installEvent;
+  $('#install-desktop').hidden = ios || android || !!installEvent;
+}
+
+async function promptInstall() {
+  if (!installEvent) { showView('save'); $('#install').scrollIntoView({ behavior: 'smooth' }); return; }
+  installEvent.prompt();
+  await installEvent.userChoice;
+  installEvent = null;
+  renderInstall();
+}
+
+window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); installEvent = e; renderInstall(); });
+window.addEventListener('appinstalled', () => { installEvent = null; renderInstall(); toast('Appli installée'); });
+$('#install-btn').addEventListener('click', promptInstall);
+$('#banner-install').addEventListener('click', promptInstall);
+$('#banner-close').addEventListener('click', () => { state.installDismissed = true; saveState(); renderInstall(); });
+
 // ---------- Démarrage ----------
 
 async function init() {
@@ -620,8 +826,12 @@ async function init() {
   }
   renderEditionSelect();
   renderAll();
+  renderInstall();
+  renderLastTrade();
   const f = parseShare(location.hash);
+  const t = parseTrade(location.hash);
   if (f) await openFriend(f);
+  else if (t) await openTrade(t);
   else if (!state.name && !state.welcomed) $('#welcome').showModal();
 }
 

@@ -7,7 +7,7 @@ Pas de compte, pas de serveur : tout est stocké dans le navigateur (`localStora
 
 - Grille de vignettes : un tap = +1 (mode « Retirer » pour corriger), filtres manquantes / possédées / doubles.
 - Doubles et manquantes, avec un bouton pour copier / partager les listes.
-- Échange : chaque appli génère un QR code (lien `#/s/<édition>/<comptes>/<prénom>`). L'autre le scanne avec l'appli ou l'appareil photo du téléphone et voit ce que chacun peut donner à l'autre.
+- Échange : chaque appli génère un QR code (lien `#/s/<édition>/<comptes>/<prénom>`). L'autre le scanne (appli ou appareil photo), choisit les vignettes à échanger et confirme : sa collection se met à jour, puis un QR de confirmation (`#/x/…`) permet à l'autre de cocher l'échange de son côté. Annulation possible.
 - Sauvegarde : export / import JSON.
 - Visuels : les images des cartes sont dans `img/cartes/` (`001.webp`… `108.webp`, puis `109.webp`… pour les fixeez). Sans image, une silhouette générique est affichée.
 - Plusieurs éditions (une par année) via `collections/`.
